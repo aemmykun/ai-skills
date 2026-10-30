@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "skills": [
+    "skills/create-skill/manifest.json",
+    "skills/fnb-agent-skill-v1/manifest.json",
+    "skills/front-office-agent-skill-v1/manifest.json",
+    "skills/hotel-management-skill-v1/manifest.json",
+    "skills/housekeeping-agent-skill-v1/manifest.json",
+    "skills/housekeeping-manager-skill-v1/manifest.json",
+    "skills/restaurant-manager-skill-v1/manifest.json",
+    "universal-adaptor-second-thought/manifest.json",
+    "skills/text-statistics/manifest.json",
+    "skills/json-format/manifest.json",
+    "skills/http-json/manifest.json"
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "id": "json-format",
+  "version": "1.0.0",
+  "description": "Format a JSON value without external services.",
+  "mode": "module",
+  "instructions": "SKILL.md",
+  "inputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "value": {},
+      "indent": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 8
+      }
+    },
+    "required": [
+      "value"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "formatted": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "formatted"
+    ]
+  },
+  "handler": "handler.js"
+}

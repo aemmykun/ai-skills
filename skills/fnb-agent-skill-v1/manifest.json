@@ -1,0 +1,48 @@
+{
+  "id": "fnb-agent-skill-v1",
+  "version": "1.0.0",
+  "description": "Instruction-only fnb agent skill v1. No external system connection.",
+  "mode": "instructions",
+  "instructions": "SKILL.md",
+  "inputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "task": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20000
+      }
+    },
+    "required": [
+      "task"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "instructions": {
+        "type": "string"
+      },
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000
+          }
+        },
+        "required": [
+          "task"
+        ]
+      }
+    },
+    "required": [
+      "instructions",
+      "input"
+    ]
+  }
+}
