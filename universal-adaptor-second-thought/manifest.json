@@ -1,0 +1,48 @@
+{
+  "id": "universal-adaptor-second-thought",
+  "version": "1.0.0",
+  "description": "Second Thought orchestration guidance; does not run parallel agents.",
+  "mode": "instructions",
+  "instructions": "SKILL.md",
+  "inputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "task": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 20000
+      }
+    },
+    "required": [
+      "task"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "instructions": {
+        "type": "string"
+      },
+      "input": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "task": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20000
+          }
+        },
+        "required": [
+          "task"
+        ]
+      }
+    },
+    "required": [
+      "instructions",
+      "input"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "http-json",
+  "version": "1.0.0",
+  "description": "Call an operator-configured HTTPS JSON service; requires configuration.",
+  "mode": "http",
+  "instructions": "SKILL.md",
+  "inputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "message": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10000
+      }
+    },
+    "required": [
+      "message"
+    ]
+  },
+  "outputSchema": {
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+      "reply": {
+        "type": "string",
+        "maxLength": 100000
+      }
+    },
+    "required": [
+      "reply"
+    ]
+  },
+  "http": {
+    "endpointEnv": "HTTP_JSON_ENDPOINT",
+    "tokenEnv": "HTTP_JSON_TOKEN",
+    "timeoutMs": 10000
+  }
+}
